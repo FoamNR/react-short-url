@@ -14,7 +14,7 @@ export default function Login() {
   e.preventDefault();
   try {
     await axios.post(
-      "http://localhost:3000/auth/login",
+      "http://35.202.71.133:5000:3000/auth/login",
       { username, password },
       { withCredentials: true } // ✅ ให้ axios รับ cookie กลับมาจาก backend
     );
@@ -30,7 +30,7 @@ export default function Login() {
   // ✅ Guest Login
  const handleGuest = async () => {
   try {
-    await axios.post("http://localhost:3000/auth/guest", {}, { withCredentials: true });
+    await axios.post("http://35.202.71.133:5000:3000/auth/guest", {}, { withCredentials: true });
     alert("เข้าสู่ระบบ Guest");
     navigate("/shorturl");
   } catch (err) {
