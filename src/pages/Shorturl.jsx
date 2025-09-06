@@ -38,8 +38,12 @@ export default function UrlDashboard() {
     try {
       const response = await axios.post(
         "http://35.202.71.133:3000/shorten",
-        { originalUrl },
-        { withCredentials: true }
+        {
+            headers: {
+                Cookie: `token=${token}`,
+                'token': token
+            }
+        }
       );
       if (!response.data?.shortUrl) throw new Error("Invalid response");
       setResult(response.data);
