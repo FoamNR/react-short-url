@@ -37,7 +37,7 @@ export default function UrlDashboard() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://35.202.71.133:5000:3000/shorten",
+        "http://35.202.71.133:3000:3000/shorten",
         { originalUrl },
         { withCredentials: true }
       );
@@ -56,7 +56,7 @@ export default function UrlDashboard() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get("http://35.202.71.133:5000:3000/user/history", {
+      const res = await axios.get("http://35.202.71.133:3000:3000/user/history", {
         withCredentials: true,
       });
       setUrls(res.data.urls || []);
@@ -70,7 +70,7 @@ export default function UrlDashboard() {
   const fetchUrlHistory = async (shorturl_id) => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://35.202.71.133:5000:3000/history/${shorturl_id}`, {
+      const res = await axios.get(`http://35.202.71.133:3000:3000/history/${shorturl_id}`, {
         withCredentials: true,
       });
       setSelectedHistory(res.data);
@@ -92,7 +92,7 @@ export default function UrlDashboard() {
 
     setLoading(true);
     try {
-      await axios.delete(`http://35.202.71.133:5000:3000/${shorturl_id}`, {
+      await axios.delete(`http://35.202.71.133:3000:3000/${shorturl_id}`, {
         withCredentials: true,
       });
       // อัพเดตตารางใหม่ (filter เอาอันที่ลบออก)
