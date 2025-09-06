@@ -38,6 +38,7 @@ export default function UrlDashboard() {
     try {
       const response = await axios.post(
         "http://35.202.71.133:3000/shorten",
+        { originalUrl },
         {
             headers: {
                 Cookie: `token=${token}`,
