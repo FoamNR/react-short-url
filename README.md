@@ -1,12 +1,44 @@
-# React + Vite
+# react-short-url
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+เทมเพลต React ที่ใช้ Vite สำหรับการพัฒนาแอปพลิเคชัน URL ย่อ (URL shortener).
 
-Currently, two official plugins are available:
+## คุณสมบัติ
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* การตั้งค่าเริ่มต้นที่รวดเร็วด้วย Vite
+* รองรับการพัฒนาแบบ Hot Module Replacement (HMR)
+* รวมการตั้งค่า ESLint สำหรับการตรวจสอบคุณภาพโค้ด
 
-## Expanding the ESLint configuration
+## การติดตั้ง
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. โคลนโปรเจกต์
+
+```bash
+git clone https://github.com/FoamNR/react-short-url.git
+cd react-short-url
+```
+
+### 2. ติดตั้ง Dependencies
+
+```bash
+npm install
+```
+
+### 3. รันแอปพลิเคชัน
+
+```bash
+npm run dev
+```
+
+แอปพลิเคชันจะเริ่มทำงานที่ [http://localhost:3000](http://localhost:3000).
+
+## การพัฒนา
+
+โปรเจกต์นี้ใช้ Vite สำหรับการพัฒนาแอปพลิเคชัน. คุณสามารถปรับแต่งการตั้งค่าในไฟล์ `vite.config.js` ตามความต้องการของคุณ.
+
+## การมีส่วนร่วม
+
+ยินดีต้อนรับการมีส่วนร่วมจากชุมชน. หากคุณพบปัญหาหรือมีข้อเสนอแนะ, โปรดเปิด Issue หรือส่ง Pull Request.
+
+## ลิขสิทธิ์
+
+MIT License. ดูไฟล์ [LICENSE](LICENSE) สำหรับรายละเอียดเพิ่มเติม.
